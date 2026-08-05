@@ -1,13 +1,99 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <header></header>
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <title>Netflix</title>
+  </head>
+  <body>
+    <header>
+      <nav class="home-navbar">
+        <div class="logo">
+          <img
+            src="https://occ.a.nflxso.net/dnmt/api/v6/iL4oJVDYZ8KLSrJ6eG2OwtghbfQ/AAAAAZge2REfWoSoWRs31izjUdgihldMUslSHTdfz-1aT4vVrgJuVByU92G8wIrBkwULJHWjM1khpzW0xWndigQFYViKFpy-pM6NZFnTKEPkpf9hcdSzCyzqBbcouyIpmgVLbodhaeyqCXaS.svg"
+            alt="Logo Netflix"
+          />
+        </div>
+        <div class="nav-primary">
+          <ul>
+            <li><a href="#" id="link-home">Início</a></li>
+            <li><a href="#">Séries</a></li>
+            <li><a href="#">Filmes</a></li>
+            <li><a href="#">Jogos</a></li>
+            <li><a href="#">Bombando</a></li>
+            <li><a href="#">Minha lista</a></li>
+            <li><a href="#">Navegar por idiomas</a></li>
+          </ul>
+        </div>
+        <div class="nav-secondary">
+          <ul>
+            <li>
+              <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-regular fa-bell"></i></a>
+            </li>
+
+            <li class="profile-dropdown">
+              <div class="profile-trigger">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png"
+                  alt="Perfil de Usuário"
+                  class="perfil-nav"
+                />
+                <i class="fa-solid fa-caret-down caret"></i>
+              </div>
+
+              <div class="dropdown-content">
+                <div class="profiles-list">
+                  <a href="#" class="dropdown-item profile-item">
+                    <img
+                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_0ktq5pFEz71BIDJbH0XXC9STcigP68GQy0j4jxhmOg&s=10"
+                      alt="Perfil 1"
+                    />
+                    <span>Perfil 1</span>
+                  </a>
+                  <a href="#" class="dropdown-item profile-item">
+                    <img
+                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbDIaLHtf1MxGySEiBB30kG7H8Joqq8lpiN4W2MJq0wA&s=10"
+                      alt="Perfil 2"
+                    />
+                    <span>Perfil 2</span>
+                  </a>
+                </div>
+
+                <div class="dropdown-divider"></div>
+
+                <a href="#" class="dropdown-item">
+                  <i class="fa-solid fa-pen"></i>
+                  <span>Gerenciar perfis</span>
+                </a>
+                <a href="#" class="dropdown-item">
+                  <i class="fa-regular fa-user"></i>
+                  <span>Conta</span>
+                </a>
+                <a href="#" class="dropdown-item">
+                  <i class="fa-regular fa-circle-question"></i>
+                  <span>Central de Ajuda</span>
+                </a>
+
+                <div class="dropdown-divider"></div>
+
+                <a href="#" class="dropdown-item sign-out">
+                  <span>Sair da Netflix</span>
+                </a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
     <main></main>
     <footer></footer>
-</body>
+  </body>
 </html>
