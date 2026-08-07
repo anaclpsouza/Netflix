@@ -32,7 +32,6 @@ body {
 
 .home-navbar {
   position: fixed;
-  top: 10px;
   left: 0;
   width: 100%;
   height: 68px;
@@ -508,6 +507,7 @@ svg {
 .media-scroller:hover .navigation-indicators {
   opacity: 1;
 }
+
 
 /* ----- footer ----- */
 
