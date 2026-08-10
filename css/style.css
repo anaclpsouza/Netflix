@@ -54,7 +54,6 @@ option {
    ========================================= */
 .home-navbar {
   position: fixed;
-  top: 10px;
   left: 0;
   width: 100%;
   height: 68px;
@@ -62,11 +61,7 @@ option {
   align-items: center;
   gap: 20px;
   padding: 0 4%;
-  background-image: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 0.7) 10%,
-    transparent
-  );
+  background-color: #000;
   z-index: 1000;
   transition: background-color 0.4s ease;
 }
