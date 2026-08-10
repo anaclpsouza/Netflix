@@ -32,12 +32,10 @@ body {
 }
 
 .login-body {
-  background-image: linear-gradient(
-    to bottom,
-    #3b090b 0%,
-    #000000 45%,
-    #000000 100%
-  );
+  background-image: linear-gradient(to bottom,
+      #3b090b 0%,
+      #000000 45%,
+      #000000 100%);
 
   min-height: 100vh;
   margin: 0;
@@ -317,7 +315,8 @@ option {
 .login-box {
   display: flex;
   flex-direction: column;
-  align-items: stretch; /* para esticar os itens */
+  align-items: stretch;
+  /* para esticar os itens */
   max-width: 420px;
   margin: 0 auto;
   margin-top: 10px;
@@ -532,12 +531,10 @@ option {
   position: absolute;
   inset: 0;
   background: rgba(0, 0, 0, 0.6);
-  background-image: linear-gradient(
-    to top,
-    rgba(0, 0, 0, 0.6) 0,
-    rgba(0, 0, 0, 0.1) 60%,
-    rgba(0, 0, 0, 0.6) 100%
-  );
+  background-image: linear-gradient(to top,
+      rgba(0, 0, 0, 0.6) 0,
+      rgba(0, 0, 0, 0.1) 60%,
+      rgba(0, 0, 0, 0.6) 100%);
 }
 
 .hero-landing-content {
@@ -600,8 +597,8 @@ option {
   pointer-events: none;
 }
 
-.input-group input:focus ~ label,
-.input-group input:not(:placeholder-shown) ~ label {
+.input-group input:focus~label,
+.input-group input:not(:placeholder-shown)~label {
   top: 14px;
   font-size: 0.75rem;
 }
@@ -744,6 +741,7 @@ option {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
 @media (max-width: 600px) {
   .reasons-grid {
     grid-template-columns: 1fr;
@@ -1316,4 +1314,142 @@ footer .footer-link-wrapper {
 #login-footer {
   background-color: #000;
   border-top: 1px solid rgba(128, 128, 128, 0.274);
+}
+
+/* =========================================
+   TELA DE SELEÇÃO DE PERFIS
+   ========================================= */
+   
+.profiles-body {
+  background-color: #141414;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.profiles-header {
+  padding: 20px 4%;
+}
+
+.profiles-header img {
+  width: 90px;
+}
+
+.profiles-main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profiles-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.profiles-container h1 {
+  font-size: clamp(2rem, 4vw, 3.5rem); /* Fonte que diminui em celular e cresce no PC */
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+
+
+.profiles-main .profiles-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; 
+  gap: 2vw; 
+  list-style: none;
+  padding: 0;
+  margin: 0 0 4rem 0;
+}
+
+.profile-item a {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+
+.profile-avatar {
+  width: min(12vw, 150px); 
+  min-width: 84px;
+  aspect-ratio: 1 / 1;
+  border-radius: 4px;
+  border: 3px solid transparent; 
+  overflow: hidden;
+  transition: border-color 0.2s ease;
+}
+
+.profile-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-name {
+  color: grey;
+  font-size: 1.3rem;
+  transition: color 0.2s ease;
+}
+
+
+.profile-item a:hover .profile-avatar {
+  border-color: #fff; 
+}
+
+.profile-item a:hover .profile-name {
+  color: #fff; 
+}
+
+
+.add-profile .icon-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  font-size: 3rem;
+  color: grey;
+}
+
+.add-profile a:hover .icon-wrapper {
+  background-color: #e5e5e5;
+  color: #141414; /* O maiszinho fica preto */
+}
+
+
+.btn-manage-profiles {
+  color: grey;
+  border: 1px solid grey;
+  padding: 0.5rem 1.5rem;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.btn-manage-profiles:hover {
+  color: #fff;
+  border-color: #fff;
+}
+
+
+@media (max-width: 768px) {
+  .profiles-list {
+    gap: 15px;
+  }
+  .profile-name {
+    font-size: 1rem;
+  }
+  .add-profile .icon-wrapper {
+    font-size: 2rem;
+  }
 }
