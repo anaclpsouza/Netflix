@@ -113,7 +113,7 @@ option {
   list-style: none;
 }
 
-.nav-secondary a {
+.nav-secondary a:not(.btn-login) {
   text-decoration: none;
   color: #e5e5e5;
   font-size: 1.3rem;
@@ -275,9 +275,10 @@ option {
 .btn-login {
   background-color: #e50914;
   color: white;
-  padding: 10px 18px;
+  padding: 5px 18px;
   border-radius: 4px;
-  font-size: 5px;
+  font-size: 1rem;
+  text-decoration: none;
 }
 
 .btn-login:hover {
@@ -748,10 +749,10 @@ details[open] summary::after {
 }
 
 .form-disclaimer {
-  font-size: 15px;
+  font-size: 17px;
   width: 100%;
   line-height: 1.5;
-  text-align: justify;
+  text-align: left;
   color: rgb(170, 170, 170);
 }
 
@@ -1046,7 +1047,7 @@ details[open] summary::after {
 }
 
 /* =========================================
-    FOOTER
+    FOOTER (HOME)
    ========================================= */
 footer {
   width: 100%;
@@ -1106,4 +1107,110 @@ footer .footer-link-wrapper {
 .footer-copyright {
   font-size: 11px;
   color: grey;
+}
+
+/* =========================================
+    FOOTER (INDEX)
+   ========================================= */
+
+.index-footer {
+  background-color: #000;
+  color: rgba(255, 255, 255, 0.7); 
+  padding: 40px 5%;
+}
+
+.index-footer .footer-container {
+  max-width: 1450px; 
+  margin: 0 auto;
+}
+
+.index-footer .footer-top {
+  margin-bottom: 30px;
+  font-size: 15px;
+}
+
+.index-footer .footer-top a {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: underline;
+  transition: color 0.2s ease;
+}
+
+.index-footer .footer-top a:hover {
+  color: #fff;
+}
+
+.index-footer .footer-links {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px 24px; 
+  list-style: none;
+  padding: 0;
+  margin: 0 0 35px 0;
+}
+
+.index-footer .footer-links li {
+  margin: 0; 
+}
+
+.index-footer .footer-links a {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+  text-decoration: underline; 
+  transition: color 0.15s ease;
+}
+
+
+/* Seletor de Idioma */
+.index-footer .lang-selector {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 24px;
+}
+
+.index-footer .lang-selector i {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: white;
+}
+
+.index-footer .lang-selector select {
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  border-radius: 4px;
+  padding: 6px 20px 6px 32px; 
+  font-size: 14px;
+  cursor: pointer;
+  outline: none;
+}
+
+.index-footer .lang-selector select option {
+  background-color: #333; 
+  color: #fff;
+}
+
+.index-footer .footer-country {
+  margin-bottom: 16px;
+  font-size: 13px;
+}
+
+.index-footer .footer-disclaimer {
+  font-size: 13px;
+  margin: 0;
+  line-height: 1.4;
+  color: gray;
+}
+
+@media (max-width: 900px) {
+  .index-footer .footer-links {
+    grid-template-columns: repeat(2, 1fr); 
+  }
+}
+
+@media (max-width: 480px) {
+  .index-footer .footer-links {
+    grid-template-columns: 1fr; 
+  }
 }
