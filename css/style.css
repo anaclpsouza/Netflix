@@ -298,7 +298,7 @@ option {
    ========================================= */
 
 .nav-login {
-  position: fixed;
+  position: relative;
   left: 0;
   top: 10px;
   width: 100%;
@@ -307,7 +307,6 @@ option {
   align-items: center;
   gap: 20px;
   padding: 0 4% 0 7%;
-  z-index: 1000;
   border-bottom: 1px solid rgba(128, 128, 128, 0.315);
 }
 
@@ -321,8 +320,9 @@ option {
   align-items: stretch; /* para esticar os itens */
   max-width: 420px;
   margin: 0 auto;
-  margin-top: 150px;
+  margin-top: 10px;
   padding: 1.5rem;
+  height: 600px;
 }
 
 .login-box h1 {
@@ -1303,4 +1303,15 @@ footer .footer-link-wrapper {
   .index-footer .footer-links {
     grid-template-columns: 1fr;
   }
+}
+
+/* =========================================
+    FOOTER (LOGIN)
+   ========================================= */
+
+/* herda quase tudo do footer do index */
+
+#login-footer {
+  background-color: #000;
+  border-top: 1px solid rgba(128, 128, 128, 0.274);
 }
