@@ -32,10 +32,12 @@ body {
 }
 
 .login-body {
-  background-image: linear-gradient(to bottom,
-      #3b090b 0%,
-      #000000 45%,
-      #000000 100%);
+  background-image: linear-gradient(
+    to bottom,
+    #3b090b 0%,
+    #000000 45%,
+    #000000 100%
+  );
 
   min-height: 100vh;
   margin: 0;
@@ -235,12 +237,19 @@ option {
   align-items: center;
   padding: 14px 20px;
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: 700;
   z-index: 2000;
   text-decoration: none;
+  text-align: center;
 }
 
 .logged-out-nav {
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  position: relative;
   justify-content: space-between;
   top: 49px;
 }
@@ -289,6 +298,34 @@ option {
 .btn-login:hover {
   background-color: #c11119;
   opacity: 1;
+}
+
+@media (max-width: 1024px) {
+  .logged-out-nav {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .lang-selector {
+    justify-content: center;
+    padding: 9px;
+  }
+
+  .lang-selector select {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    padding: 0;
+  }
+
+  #logo-index img {
+    width: 100px;
+    margin-left: 10px;
+  }
 }
 
 /* =========================================
@@ -531,10 +568,12 @@ option {
   position: absolute;
   inset: 0;
   background: rgba(0, 0, 0, 0.6);
-  background-image: linear-gradient(to top,
-      rgba(0, 0, 0, 0.6) 0,
-      rgba(0, 0, 0, 0.1) 60%,
-      rgba(0, 0, 0, 0.6) 100%);
+  background-image: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.6) 0,
+    rgba(0, 0, 0, 0.1) 60%,
+    rgba(0, 0, 0, 0.6) 100%
+  );
 }
 
 .hero-landing-content {
@@ -597,8 +636,8 @@ option {
   pointer-events: none;
 }
 
-.input-group input:focus~label,
-.input-group input:not(:placeholder-shown)~label {
+.input-group input:focus ~ label,
+.input-group input:not(:placeholder-shown) ~ label {
   top: 14px;
   font-size: 0.75rem;
 }
@@ -610,7 +649,7 @@ option {
   border-radius: 4px;
   padding: 0 1.5rem;
   font-size: 1.25rem;
-  font-weight: 500;
+  font-weight: 600;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -629,6 +668,27 @@ option {
   font-size: 0.85rem;
   color: rgba(255, 255, 255, 0.7);
   margin-top: 1rem;
+}
+
+@media (max-width: 1024px) {
+  .logged-out-nav {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-landing {
+    margin-top: 5px;
+  }
+
+  .landing-title {
+    font-size: 2rem;
+  }
+
+  .landing-subtitle,
+  .btn-get-started {
+    font-size: 1rem;
+  }
 }
 
 /* =========================================
@@ -1297,6 +1357,20 @@ footer .footer-link-wrapper {
   .index-footer .footer-links {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .index-footer .lang-selector {
+    justify-content: center;
+    padding: 15px;
+  }
+
+  .index-footer .lang-selector select {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+  }
 }
 
 @media (max-width: 480px) {
@@ -1319,7 +1393,7 @@ footer .footer-link-wrapper {
 /* =========================================
    TELA DE SELEÇÃO DE PERFIS
    ========================================= */
-   
+
 .profiles-body {
   background-color: #141414;
   color: #fff;
@@ -1353,17 +1427,20 @@ footer .footer-link-wrapper {
 }
 
 .profiles-container h1 {
-  font-size: clamp(2rem, 4vw, 3.5rem); /* Fonte que diminui em celular e cresce no PC */
+  font-size: clamp(
+    2rem,
+    4vw,
+    3.5rem
+  ); /* Fonte que diminui em celular e cresce no PC */
   font-weight: 500;
   margin-bottom: 2rem;
 }
 
-
 .profiles-main .profiles-list {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap; 
-  gap: 2vw; 
+  flex-wrap: wrap;
+  gap: 2vw;
   list-style: none;
   padding: 0;
   margin: 0 0 4rem 0;
@@ -1377,13 +1454,12 @@ footer .footer-link-wrapper {
   gap: 15px;
 }
 
-
 .profile-avatar {
-  width: min(12vw, 150px); 
+  width: min(12vw, 150px);
   min-width: 84px;
   aspect-ratio: 1 / 1;
   border-radius: 4px;
-  border: 3px solid transparent; 
+  border: 3px solid transparent;
   overflow: hidden;
   transition: border-color 0.2s ease;
 }
@@ -1400,15 +1476,13 @@ footer .footer-link-wrapper {
   transition: color 0.2s ease;
 }
 
-
 .profile-item a:hover .profile-avatar {
-  border-color: #fff; 
+  border-color: #fff;
 }
 
 .profile-item a:hover .profile-name {
-  color: #fff; 
+  color: #fff;
 }
-
 
 .add-profile .icon-wrapper {
   display: flex;
@@ -1424,7 +1498,6 @@ footer .footer-link-wrapper {
   color: #141414; /* O maiszinho fica preto */
 }
 
-
 .btn-manage-profiles {
   color: grey;
   border: 1px solid grey;
@@ -1433,14 +1506,15 @@ footer .footer-link-wrapper {
   letter-spacing: 2px;
   text-decoration: none;
   text-transform: uppercase;
-  transition: color 0.2s ease, border-color 0.2s ease;
+  transition:
+    color 0.2s ease,
+    border-color 0.2s ease;
 }
 
 .btn-manage-profiles:hover {
   color: #fff;
   border-color: #fff;
 }
-
 
 @media (max-width: 768px) {
   .profiles-list {
