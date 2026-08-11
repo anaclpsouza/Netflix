@@ -37,17 +37,31 @@
             <label for="user-id">Email ou número de celular</label>
           </div>
 
-          <a href="profile.html" class="btn-login-submit" role="button">Continuar</a>
+          <div class="input-group">
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder=" "
+              required />
+            <label for="password">Senha</label>
+          </div>
+
+          <a href="profile.html" class="btn-login-submit" role="button">Entrar</a>
+
+          <div class="form-help">
+            <div class="remember-me">
+              <input type="checkbox" id="remember" name="remember" checked>
+              <label for="remember">Lembrar de mim</label>
+            </div>
+            <a href="#" class="forgot-password">Esqueceu a senha?</a>
+          </div>
         </form>
 
-        <details class="help-section">
-          <summary>Ajuda</summary>
-          <div class="help-content">
-            <a href="#">Esqueceu o email ou número de celular?</a>
-            <br />
-            <a href="#">Saiba mais sobre como entrar</a>
-          </div>
-        </details>
+        <div class="signup-now">
+          <span class="text-gray">Ainda não possui uma conta?</span>
+          <a href="../index.html">Assine agora.</a>
+        </div>
 
         <div class="recaptcha-terms">
           <p>

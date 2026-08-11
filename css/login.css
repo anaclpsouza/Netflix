@@ -75,14 +75,57 @@
   background-color: #c11119;
 }
 
-.help-section a {
+.form-help {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
   color: #b3b3b3;
-  font-size: 0.9rem;
-  display: inline-block;
-  margin-bottom: 0.5rem;
+  margin-top: -10px; 
 }
 
-.help-section a:hover {
+.remember-me {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.remember-me input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: #737373;
+  cursor: pointer;
+}
+
+.remember-me label {
+  cursor: pointer;
+}
+
+.forgot-password {
+  color: #b3b3b3;
+  text-decoration: none;
+}
+
+.forgot-password:hover {
+  text-decoration: underline;
+}
+
+.signup-now {
+  margin-top: 2rem;
+  font-size: 1rem;
+}
+
+.signup-now .text-gray {
+  color: #8c8c8c;
+}
+
+.signup-now a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.signup-now a:hover {
   text-decoration: underline;
 }
 
