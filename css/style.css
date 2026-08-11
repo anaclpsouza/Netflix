@@ -1000,18 +1000,24 @@ details[open] summary::after {
 .carroussel .section-title {
   margin-block: 2.5rem 0.75rem;
   margin-left: 40px;
+  margin-bottom: 30px;
 }
 
 .media-container {
   position: relative;
-  z-index: 0;
+  z-index: 1;
+  transition: z-index 0.1s ease;
+}
+
+.media-container:hover {
+  z-index: 100;
 }
 
 .media-scroller,
 .media-group {
   margin-top: 0;
   padding: 0;
-  display: grid;
+  display: flex;
   gap: 0.25rem;
   grid-auto-flow: column;
 }
@@ -1021,38 +1027,30 @@ details[open] summary::after {
   scroll-behavior: smooth;
   grid-auto-columns: 100%;
   scroll-padding-inline: 3rem;
-  padding: 1rem 3rem 4rem;
+  padding: 3rem 3rem 14rem;
+  margin-top: -4rem;
+  margin-bottom: -10rem;
 }
 
 .media-group {
-  grid-template-columns: repeat(6, 1fr);
+  flex: 0 0 100%;
   scroll-margin-top: 25vh;
 }
 
 .media-element {
+  flex: 0 0 calc((100% - 1.25rem) / 6);
   position: relative;
   border-radius: 0.25rem;
-  overflow: hidden;
   cursor: pointer;
   transition:
     transform 0.3s cubic-bezier(0.25, 1, 0.5, 1),
     box-shadow 0.3s ease;
   z-index: 1;
-  max-width: 50vh;
 }
 
 .media-element:hover {
-  transform: scale(1.2);
-  z-index: 1000;
-  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.9);
-}
-
-.media-group .media-element:first-child:hover {
-  transform-origin: left center;
-}
-
-.media-group .media-element:last-child:hover {
-  transform-origin: right center;
+  transform: scale(1.2); /* faz o card crescer */
+  z-index: 1000; /* garante que fique por cima das outras fileiras */
 }
 
 .media-element > img {
@@ -1060,33 +1058,47 @@ details[open] summary::after {
   aspect-ratio: 16 / 9;
   object-fit: cover;
   align-self: center;
+  border-radius: 0.25rem;
+  transition: border-radius 0.3s ease;
+  display: block;
+}
+
+/* quando em hover, remove o arredondamento inferior da imagem para emendar com a info */
+.media-element:hover > img {
   border-radius: 0.25rem 0.25rem 0 0;
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.9);
 }
 
 .media-element .media-info {
   position: absolute;
-  inset: 0;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: #141414;
   padding: 1.2rem;
-  background: linear-gradient(
-    180deg,
-    rgba(24, 24, 24, 0) 0%,
-    rgba(24, 24, 24, 0.88) 40%,
-    #181818 100%
-  );
+
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
+
+  /* arredonda apenas a parte de baixo e adiciona sombra */
+  border-radius: 0 0 0.25rem 0.25rem;
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.9);
+
   opacity: 0;
-  transform: translateY(8px);
+  visibility: hidden;
+  transform: translateY(-10px); /* começa um pouco para cima */
   transition:
     opacity 0.25s ease,
-    transform 0.25s ease;
+    transform 0.25s ease,
+    visibility 0.25s ease;
   pointer-events: none;
 }
 
 .media-element:hover .media-info {
   opacity: 1;
-  transform: translateY(0);
+  visibility: visible;
+  transform: translateY(0); /* desliza para o lugar */
   pointer-events: auto;
 }
 
@@ -1190,14 +1202,14 @@ details[open] summary::after {
 
 .previous {
   left: 0;
-  top: 0;
-  bottom: 0;
+  top: 3rem;
+  height: 180px;
 }
 
 .next {
   right: 0;
-  top: 0;
-  bottom: 0;
+  top: 3rem;
+  height: 180px;
 }
 
 .media-group:first-child :where(.next, .previous) {
@@ -1229,6 +1241,14 @@ details[open] summary::after {
   .media-group:first-of-type
   .next {
   display: none;
+}
+
+.media-group .media-element:first-child:hover {
+  transform-origin: left center;
+}
+
+.media-group .media-element:last-child:hover {
+  transform-origin: right center;
 }
 
 /* Navigation Indicators */
@@ -1273,6 +1293,58 @@ details[open] summary::after {
 
 .media-scroller:hover .navigation-indicators {
   opacity: 1;
+}
+
+/* responsividade calculada com base nos testes */
+@media (max-width: 1300px) {
+
+  .carroussel .section-title {
+    font-size: 1  rem;
+  }
+
+  .media-scroller {
+    display: flex; 
+    overflow-x: auto; /* habilita o scroll horizontal com o dedo */
+    scroll-snap-type: x mandatory; /* deixa o deslizar suave */
+    padding: 1rem 4%;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .media-group {
+    display: flex; 
+    gap: 0.5rem;
+  }
+
+  /* conecta visualmente o grupo de 6 com o grupo de 2 sem deixar buracos no layout */
+  .media-group:not(:last-child) {
+    margin-right: 0.5rem;
+  }
+
+  .media-element {
+    width: 40vw;
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    max-width: none;
+  }
+
+  .media-element:hover {
+    transform: none;
+    z-index: 1;
+  }
+
+  .media-element:hover > img {
+    border-radius: 0.25rem;
+  }
+
+  .media-element .media-info {
+    display: none !important; 
+  }
+
+  .media-group .next,
+  .media-group .previous {
+    display: none !important;
+  }
 }
 
 /* =========================================
