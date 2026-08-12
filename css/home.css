@@ -1,4 +1,359 @@
 /* =========================================
+   MOVIE MODAL
+   ========================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Teachers:ital,wght@0,400..800;1,400..800&display=swap');
+
+.link-modal {
+  text-decoration: none;
+  color: inherit;
+  outline: none;
+  display: block;
+}
+
+.modal {
+  display: flex;
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  z-index: 1000;
+
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: background-color 0.4s ease, opacity 0.4s ease;
+}
+
+.modal:target {
+  opacity: 1;
+  pointer-events: auto;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal .modal-content {
+  margin-top: 60px;
+  padding: 0;
+  min-width: 100vh;
+  max-height: 100vh;
+  background: rgb(20, 20, 20);
+  box-shadow: 0 4px 12px rgb(0, 0, 0);
+  overflow-y: auto;
+  transform: scale(0.3);
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.modal:target .modal-content {
+  transform: scale(1);
+}
+
+/* Container principal do modal */
+.modal-content {
+  position: relative;
+  background-color: #181818;
+  width: 900px;
+  max-width: 95%;
+  overflow: hidden;
+  color: white;
+  z-index: 1;
+}
+
+/* MODAL: BANNER E TEXTOS FLUTUANTES */
+
+.modal-banner {
+  position: relative;
+  width: 100%;
+}
+
+.modal-banner img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  display: block;
+}
+
+.banner-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(to top, #181818 0%, transparent 100%);
+}
+
+.banner-info {
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+  z-index: 2;
+}
+
+.banner-info h2 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 5rem;
+  margin: 0 0 20px 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.banner-botoes {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.btn-play {
+  background-color: white;
+  color: black;
+  font-size: 1.1rem;
+  padding: 10px 24px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-icon {
+  background-color: rgba(42, 42, 42, 0.6);
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* MODAL: CORPO DO MODAL (INFORMAÇÕES) */
+
+.modal-detalhes {
+  display: flex;
+  gap: 40px;
+  padding: 0 40px 40px 40px;
+}
+
+.detalhes-esquerda {
+  flex: 2;
+}
+
+.detalhes-direita {
+  flex: 1;
+  font-size: 0.9rem;
+  color: #d2d2d2;
+}
+
+.detalhes-direita strong {
+  color: #777;
+}
+
+.metadados {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.relevancia {
+  color: #46d369;
+}
+
+.ano,
+.duracao {
+  color: #a3a3a3;
+}
+
+.badge-hd {
+  border: 1px solid #a3a3a3;
+  color: #a3a3a3;
+  padding: 0 4px;
+  border-radius: 3px;
+  font-size: 0.7rem;
+}
+
+.sinopse {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* MODAL: BOTÃO DE FECHAR (X)               */
+
+.btn-fechar-netflix {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: #181818;
+  color: white;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  z-index: 10;
+  font-size: 1.2rem;
+}
+
+/* SEÇÃO INFERIOR DO MODAL - filmes relacionados e footer  */
+
+.modal-inferior {
+  padding: 0 40px 40px 40px;
+}
+
+.titulos-semelhantes h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.grid-similares {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-bottom: 50px;
+}
+
+/* CARDS DE TÍTULOS SEMELHANTES */
+.card-similar {
+  background-color: #2f2f2f;
+  border-radius: 4px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-similar-img {
+  position: relative;
+  width: 100%;
+  height: 140px;
+}
+
+.card-similar-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.duracao-overlay {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 4px 8px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+.card-similar-info {
+  padding: 16px;
+  flex: 1;
+}
+
+.card-similar-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.icone-classificacao {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-icon-small {
+  margin-left: auto; 
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  background: transparent;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.btn-icon-small:hover {
+  border-color: white;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.sinopse-curta {
+  font-size: 0.9rem;
+  color: #d2d2d2;
+  line-height: 1.4;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 4; /* limita a sinopse a 4 linhas */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  line-clamp: 4;
+}
+
+/* FOOTER DO MODAL    */
+
+.modal-sobre {
+  padding-top: 20px;
+}
+
+.modal-sobre h3 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.sobre-info p {
+  font-size: 0.95rem;
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.sobre-info .label,
+.classificacao-rodape .label {
+  color: #777;
+}
+
+.sobre-info .valor {
+  color: #ddd;
+}
+
+.classificacao-rodape {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 15px;
+  font-size: 0.95rem;
+}
+
+.icone-classificacao-rodape {
+  display: flex;
+  align-items: center;
+}
+
+.classificacao-rodape .valor {
+  color: #ddd;
+}
+
+.aviso-idade {
+  margin-left: 10px;
+}
+
+/* =========================================
    HERO SECTION (LOGGED IN)
    ========================================= */
 .hero {
@@ -22,12 +377,10 @@
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(
-      to right,
+    linear-gradient(to right,
       rgba(0, 0, 0, 0.8) 0%,
       rgba(0, 0, 0, 0.3) 50%,
-      transparent 100%
-    ),
+      transparent 100%),
     linear-gradient(to top, rgba(20, 20, 20, 0.8) 0%, transparent 20%);
 }
 
@@ -97,6 +450,7 @@
 }
 
 .btn-play {
+  text-decoration: none;
   background-color: #fff;
   color: #000;
 }
@@ -225,7 +579,7 @@
   z-index: 1000;
 }
 
-.media-element > img {
+.media-element .link-modal img {
   width: 100%;
   aspect-ratio: 16 / 9;
   object-fit: cover;
@@ -235,7 +589,7 @@
   display: block;
 }
 
-.media-element:hover > img {
+.media-element:hover .link-modal img {
   border-radius: 0.25rem 0.25rem 0 0;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.9);
 }
@@ -301,6 +655,7 @@
   justify-content: center;
   cursor: pointer;
   outline: none;
+  text-decoration: none;
   transition:
     background-color 0.2s ease,
     border-color 0.2s ease,
@@ -388,12 +743,12 @@
   background: rgb(0 0 0 / 0.3);
 }
 
-:where(.next, .previous) > svg {
+:where(.next, .previous)>svg {
   transition: transform 75ms linear;
   transform: scale(1);
 }
 
-:where(.next, .previous):hover > svg {
+:where(.next, .previous):hover>svg {
   transform: scale(1.2);
 }
 
@@ -401,9 +756,7 @@
   display: flex;
 }
 
-.media-scroller:has(:target:not(:first-child))
-  .media-group:first-of-type
-  .next {
+.media-scroller:has(:target:not(:first-child)) .media-group:first-of-type .next {
   display: none;
 }
 
@@ -424,33 +777,31 @@
   right: 2rem;
 }
 
-.navigation-indicators > * {
+.navigation-indicators>* {
   width: 1rem;
   height: 2px;
   background: #fff;
   opacity: 0.5;
 }
 
-.media-scroller:has(.media-group:target)
-  .navigation-indicators
-  > *:nth-child(1) {
+.media-scroller:has(.media-group:target) .navigation-indicators>*:nth-child(1) {
   opacity: 0.5;
 }
 
-.navigation-indicators > *:nth-child(1),
-.media-group:nth-child(1):target ~ .navigation-indicators > *:nth-child(1) {
+.navigation-indicators>*:nth-child(1),
+.media-group:nth-child(1):target~.navigation-indicators>*:nth-child(1) {
   opacity: 1;
 }
 
-.media-group:nth-child(2):target ~ .navigation-indicators > *:nth-child(2) {
+.media-group:nth-child(2):target~.navigation-indicators>*:nth-child(2) {
   opacity: 1;
 }
 
-.media-group:nth-child(3):target ~ .navigation-indicators > *:nth-child(3) {
+.media-group:nth-child(3):target~.navigation-indicators>*:nth-child(3) {
   opacity: 1;
 }
 
-.media-group:nth-child(4):target ~ .navigation-indicators > *:nth-child(4) {
+.media-group:nth-child(4):target~.navigation-indicators>*:nth-child(4) {
   opacity: 1;
 }
 
@@ -493,7 +844,7 @@
     z-index: 1;
   }
 
-  .media-element:hover > img {
+  .media-element:hover .link-modal img {
     border-radius: 0.25rem;
   }
 
@@ -573,5 +924,80 @@ footer .footer-link-wrapper {
 @media (max-width: 600px) {
   footer .footer-link-wrapper {
     flex: 0 0 50%;
+  }
+}
+
+/* RESPONSIVIDADE DO MODAL DE DETALHES */
+@media (max-width: 768px) {
+  .modal .modal-content {
+    min-width: 0;
+    width: 95%;
+    margin-top: 30px;
+    max-height: 90vh;
+  }
+
+  .modal-banner img {
+    height: 250px;
+  }
+
+  .banner-info {
+    bottom: 20px;
+    left: 20px;
+  }
+
+  .banner-info h2 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+  }
+
+  .btn-play {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+
+  .btn-icon {
+    width: 32px;
+    height: 32px;
+    font-size: 1rem;
+  }
+
+  .modal-detalhes {
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 20px 20px 20px;
+  }
+
+  .modal-inferior {
+    padding: 0 20px 20px 20px;
+  }
+
+  .grid-similares {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-bottom: 30px;
+  }
+
+  .classificacao-rodape {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  
+  .aviso-idade {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .grid-similares {
+    grid-template-columns: 1fr;
+  }
+  
+  .modal-banner img {
+    height: 200px;
+  }
+  
+  .banner-info h2 {
+    font-size: 1.8rem;
   }
 }
