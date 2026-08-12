@@ -1,281 +1,54 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/common.css" />
-    <link rel="stylesheet" href="css/index.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-    <link rel="shortcut icon" href="assets/icons/netflix-logo-icon.png" type="image/x-icon">
-    <title>Netflix Brasil - assistir à séries onde quiser </title>
-  </head>
-  <body>
-    <a
-      href="#"
-      class="promo-banner"
-      aria-label="Página de cadastro: 30 dias grátis">
-      <p>
-        <i class="fa-solid fa-gift" aria-hidden="true"></i> Primeira vez aqui?
-        Experimente 30 dias por R$ 0.
-      </p>
-    </a>
 
-    <header>
-      <nav class="home-navbar logged-out-nav">
-        <div class="logo" id="logo-index">
-          <img
-            src="https://occ.a.nflxso.net/dnmt/api/v6/iL4oJVDYZ8KLSrJ6eG2OwtghbfQ/AAAAAZge2REfWoSoWRs31izjUdgihldMUslSHTdfz-1aT4vVrgJuVByU92G8wIrBkwULJHWjM1khpzW0xWndigQFYViKFpy-pM6NZFnTKEPkpf9hcdSzCyzqBbcouyIpmgVLbodhaeyqCXaS.svg"
-            alt="Logo Netflix" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/index.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="shortcut icon" href="assets/icons/netflix-logo-icon.png" type="image/x-icon">
+  <title>Netflix Brasil - assistir à séries onde quiser </title>
+</head>
+
+<body>
+  <a href="#" class="promo-banner" aria-label="Página de cadastro: 30 dias grátis">
+    <p>
+      <i class="fa-solid fa-gift" aria-hidden="true"></i> Primeira vez aqui?
+      Experimente 30 dias por R$ 0.
+    </p>
+  </a>
+
+  <header>
+    <nav class="home-navbar logged-out-nav">
+      <div class="logo" id="logo-index">
+        <img
+          src="https://occ.a.nflxso.net/dnmt/api/v6/iL4oJVDYZ8KLSrJ6eG2OwtghbfQ/AAAAAZge2REfWoSoWRs31izjUdgihldMUslSHTdfz-1aT4vVrgJuVByU92G8wIrBkwULJHWjM1khpzW0xWndigQFYViKFpy-pM6NZFnTKEPkpf9hcdSzCyzqBbcouyIpmgVLbodhaeyqCXaS.svg"
+          alt="Logo Netflix" />
+      </div>
+      <div class="nav-secondary">
+        <div class="lang-selector">
+          <i class="fa-solid fa-language" style="color: rgb(255, 255, 255)"></i>
+          <select>
+            <option>Português</option>
+            <option>English</option>
+          </select>
         </div>
-        <div class="nav-secondary">
-          <div class="lang-selector">
-            <i
-              class="fa-solid fa-language"
-              style="color: rgb(255, 255, 255)"></i>
-            <select>
-              <option>Português</option>
-              <option>English</option>
-            </select>
-          </div>
-          <a href="pages/login.html" class="btn-login">Entrar</a>
-        </div>
-      </nav>
-    </header>
+        <a href="pages/login.html" class="btn-login">Entrar</a>
+      </div>
+    </nav>
+  </header>
 
-    <main>
-      <section class="hero-landing">
-        <div class="hero-landing-content">
-          <h1 class="landing-title">
-            Filmes, séries e muito mais, sem limites
-          </h1>
-          <p class="landing-subtitle">
-            Planos a partir de R$ 20,90. Cancele quando quiser.
-          </p>
-          <p class="landing-call">
-            Tudo pronto para assistir? Informe seu email para iniciar sua
-            assinatura.
-          </p>
-
-          <form class="email-form">
-            <div class="input-group">
-              <input type="email" id="email" required placeholder=" " />
-              <label for="email">Email</label>
-            </div>
-            <button type="submit" class="btn-get-started">
-              Experimente 30 dias por R$ 0
-              <i class="fa-solid fa-chevron-right"></i>
-            </button>
-          </form>
-          <p class="landing-disclaimer">
-            Apenas para novos membros. Ver termos.
-          </p>
-        </div>
-      </section>
-
-      <section class="trending-section">
-        <h2 class="section-title">Em alta</h2>
-        <div class="trending-list">
-          <div class="trending-card">
-            <span class="rank-number">1</span>
-            <img
-              src="https://occ-0-1920-1380.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABRCt9CVGwqQKm1u5XByVqET0FEuvDtVFbQUjXtYSfSPsTkuYJUcdgsfD26gsrr9gPECW5EhlUKzsj0UtB1UA2T1wHKdM4c-Ri7QwJ4hSQ0sue4axwnXjFY1lY4rs9QemK3L1.jpg?r=9b0"
-              alt="A Última Casa" />
-          </div>
-
-          <div class="trending-card">
-            <span class="rank-number">2</span>
-            <img
-              src="https://occ-0-1920-1380.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABVBsxUXjb-24n8-40B4x_8OJURUJRbHEKcBGPhm9W0AcdwRLLNh0-N4Ks0n8hzMsyhiFpbOQ2RoEGuLOn3dcfnShQpn3VBpMwJbYT42iEWju8YEhn79PWzwxOMl9DZhBIMDl.jpg?r=b07"
-              alt="Elize Matsunaga" />
-          </div>
-
-          <div class="trending-card">
-            <span class="rank-number">3</span>
-            <img
-              src="https://occ-0-1920-1380.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABZTpqX2Eheu0lk-S4dGdgOFK_slT2mImJnNJ_Eoo1jM7405vdHUsTf9nNgOJfOZwN_9l7Db6o15_udHe3ntAbuNHfHnLyZn05KNPTR40H6y08N4XaYClwX0p4b6o9Hvv9rt-.jpg?r=160"
-              alt="Como Mágica" />
-          </div>
-
-          <div class="trending-card">
-            <span class="rank-number">4</span>
-            <img
-              src="https://occ-0-1920-1380.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABXxwC4AQBgNQUKx340Z3VdPKcQBCPSx1DFxzGC0SrmTmxMpBloa2vkFkU_opp2rWrQWlsryQf8sPW0TiSNedI3joBv3Ly9eRzqWkKzWDu9g7vCvTjTx1hjC1YScYlaGN4ZOi.jpg?r=6c0"
-              alt="A Vida da Família Walter" />
-          </div>
-
-          <div class="trending-card">
-            <span class="rank-number">5</span>
-            <img
-              src="https://occ-0-1920-1380.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABWJIRfrApoBahK_Y7nBfBXrVwPteUMJuSW1_SlYxoMz11pgIeErc_EK6dihmAByL0csqrM1OTzhvYy6BxxisQlGGfH3BEVJuVkfVEAcgkErHJJMbtshvjc3SidSFkgiPB_uo.jpg?r=799"
-              alt="Vou te encontrar" />
-          </div>
-
-          <div class="trending-card">
-            <span class="rank-number">6</span>
-            <img
-              src="https://occ-0-1920-1380.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABWJf4-M_aFg2YPqjkl0ujgk5sN_j8bbpWffFgdkTHAifynkGaaQcQ2TtavAdEKUvPgGgl85VsB8ZqfKcUsUcEEONAgrz077iTaE.jpg?r=0b1"
-              alt="O Mentalista" />
-          </div>
-
-          <div class="trending-card">
-            <span class="rank-number">7</span>
-            <img
-              src="https://occ-0-1920-1380.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABeZewd1qPnGi2KuKvKVifCRWf3DN9RVs5KumCdsNala5zVadvlPpmgjEXIb3Ws0g4GnzU-jmKIEOgEnReXskYxidFdtWF5vrKkBzNl2KHMSnNC0FBtFyFtHm9qEIB_zNYTaT.jpg?r=63f"
-              alt="Avatar" />
-          </div>
-        </div>
-      </section>
-
-      <section class="reasons-section">
-        <h2 class="section-title">Mais motivos para assinar</h2>
-        <div class="reasons-grid">
-          <div class="reason-card">
-            <h3>Aproveite na TV</h3>
-            <p>
-              Assista em Smart TVs, PlayStation, Xbox, Chromecast, Apple TV,
-              aparelhos de Blu-ray e outros dispositivos.
-            </p>
-            <img
-              src="assets/images/img-tela-inicial-pc.png"
-              alt="Monitor"
-              class="reason-icon" />
-          </div>
-          <div class="reason-card">
-            <h3>Baixe séries para assistir offline</h3>
-            <p>
-              Salve seus títulos favoritos e sempre tenha algo para assistir.
-            </p>
-            <img
-              src="assets/images/img-tela-inicial-seta.png"
-              alt="Download"
-              class="reason-icon" />
-          </div>
-          <div class="reason-card">
-            <h3>Assista onde quiser</h3>
-            <p>
-              Assista a quantos filmes e séries quiser no celular, tablet,
-              laptop e TV.
-            </p>
-            <img
-              src="assets/images/img-tela-inicial-telescopio.png"
-              alt="Telescopio"
-              class="reason-icon" />
-          </div>
-          <div class="reason-card">
-            <h3>Crie perfis para crianças</h3>
-            <p>
-              Deixe as crianças se aventurarem com seus personagens favoritos em
-              um espaço feito só para elas, sem pagar a mais por isso.
-            </p>
-            <img
-              src="assets/images/img-tela-inicial-perfis.png"
-              alt="Perfis Netflix"
-              class="reason-icon" />
-          </div>
-        </div>
-      </section>
-
-      <section class="faq-container">
-        <h2 class="section-title">Perguntas frequentes</h2>
-
-        <details>
-          <summary>O que é a Netflix?</summary>
-          <div class="faq-response">
-            <p>
-              A Netflix é um serviço de transmissão online que oferece uma ampla
-              variedade de séries, filmes e documentários premiados em milhares
-              de aparelhos conectados à internet.
-            </p>
-            <br />
-            <p>
-              Você pode assistir a quantos filmes e séries quiser, quando e onde
-              quiser, sem comerciais – tudo por um preço mensal bem acessível.
-              Aqui você sempre encontra novidades. A cada semana, adicionamos
-              novas séries e filmes.
-            </p>
-          </div>
-        </details>
-
-        <details>
-          <summary>Quanto custa a Netflix?</summary>
-          <div class="faq-response">
-            <p>
-              Novos assinantes podem experimentar 30 dias da Netflix por R$ 0.
-              Após o fim do teste grátis, seu plano será renovado
-              automaticamente pelo preço normal, conforme o plano selecionado.
-              Os planos variam de R$ 20,90 a R$ 59,90. <br />
-              <br />
-              Assista à Netflix no seu celular, tablet, smart TV, notebook ou
-              aparelho de streaming. Sem custo adicional, cancele quando quiser.
-            </p>
-          </div>
-        </details>
-
-        <details>
-          <summary>Onde posso assistir?</summary>
-          <div class="faq-response">
-            <p>
-              Assista onde quiser, quando quiser. Acesse sua conta Netflix em
-              netflix.com para assistir no computador ou em qualquer aparelho
-              conectado à internet compatível com o aplicativo Netflix, como
-              Smart TVs, smartphones, tablets, aparelhos de streaming e
-              videogames.
-            </p>
-            <br />
-            <p>
-              Você também pode baixar suas séries favoritas com o aplicativo
-              Netflix para iOS ou Android. Use os downloads para levar a Netflix
-              para onde quiser sem precisar de conexão com a internet. Leve a
-              Netflix com você para qualquer lugar.
-            </p>
-          </div>
-        </details>
-
-        <details>
-          <summary>Como faço para cancelar?</summary>
-          <div class="faq-response">
-            <p>
-              A Netflix é flexível. Você pode cancelar a sua conta online com
-              apenas dois cliques. Não há taxa de cancelamento. Você inicia e
-              encerra sua assinatura quando quiser.
-            </p>
-          </div>
-        </details>
-
-        <details>
-          <summary>O que eu posso assistir na Netflix?</summary>
-          <div class="faq-response">
-            <p>
-              A Netflix tem um grande catálogo de filmes, documentários, séries,
-              originais Netflix premiados e muito mais. Assista o quanto quiser,
-              quando quiser.
-            </p>
-          </div>
-        </details>
-
-        <details>
-          <summary>A Netflix é adequada para crianças?</summary>
-          <div class="faq-response">
-            <p>
-              A experiência infantil da Netflix faz parte da sua assinatura para
-              que as crianças se divirtam em seu próprio espaço com séries e
-              filmes familiares sob a supervisão dos responsáveis.
-            </p>
-            <br />
-            <p>
-              O recurso de controle parental, incluso nos perfis para crianças e
-              protegido por PIN, permite restringir a classificação etária do
-              conteúdo que as crianças podem ver e bloquear títulos específicos
-              que você não quer que elas assistam.
-            </p>
-          </div>
-        </details>
-      </section>
-
-      <section class="form-subscription">
-        <p class="form-call">
+  <main>
+    <section class="hero-landing">
+      <div class="hero-landing-content">
+        <h1 class="landing-title">
+          Filmes, séries e muito mais, sem limites
+        </h1>
+        <p class="landing-subtitle">
+          Planos a partir de R$ 20,90. Cancele quando quiser.
+        </p>
+        <p class="landing-call">
           Tudo pronto para assistir? Informe seu email para iniciar sua
           assinatura.
         </p>
@@ -290,57 +63,268 @@
             <i class="fa-solid fa-chevron-right"></i>
           </button>
         </form>
-        <span class="form-disclaimer">
-          Esta oferta só é válida para novos assinantes. Esta oferta não é
-          transferível. Você concorda que a Netflix cobre o preço da assinatura
-          da sua forma de pagamento ao final do período de utilização gratuita e
-          renove automaticamente a assinatura até você cancelar. Algumas formas
-          de pagamento podem não se qualificar para resgatar esta oferta.
-        </span>
-      </section>
-    </main>
-
-    <footer class="index-footer">
-      <div class="footer-container">
-        <p class="footer-top">
-          Dúvidas? Ligue para <a href="tel:08005918943">0800 591 8943</a>
-        </p>
-
-        <ul class="footer-links">
-          <li><a href="#">Perguntas frequentes</a></li>
-          <li><a href="#">Central de Ajuda</a></li>
-          <li><a href="#">Conta</a></li>
-          <li><a href="#">Media Center</a></li>
-          <li><a href="#">Relações com investidores</a></li>
-          <li><a href="#">Carreiras</a></li>
-          <li><a href="#">Resgatar cartão pré-pago</a></li>
-          <li><a href="#">Comprar cartão pré-pago</a></li>
-          <li><a href="#">Formas de assistir</a></li>
-          <li><a href="#">Termos de Uso</a></li>
-          <li><a href="#">Privacidade</a></li>
-          <li><a href="#">Preferências de cookies</a></li>
-          <li><a href="#">Informações corporativas</a></li>
-          <li><a href="#">Entre em contato</a></li>
-          <li><a href="#">Teste de velocidade</a></li>
-          <li><a href="#">Avisos legais</a></li>
-          <li><a href="#">Só na Netflix</a></li>
-        </ul>
-
-        <div class="lang-selector">
-          <i class="fa-solid fa-language" style="color: rgb(255, 255, 255)"></i>
-          <select>
-            <option>Português</option>
-            <option>English</option>
-          </select>
-        </div>
-
-        <p class="footer-country">Netflix Brasil</p>
-
-        <p class="footer-disclaimer">
-          Esta página é protegida pelo Google reCAPTCHA para garantir que você
-          não é um robô.
+        <p class="landing-disclaimer">
+          Apenas para novos membros. Ver termos.
         </p>
       </div>
-    </footer>
-  </body>
+    </section>
+
+    <section class="trending-section">
+      <h2 class="section-title">Em alta</h2>
+      <div class="trending-list">
+        <div class="trending-card">
+          <span class="rank-number">1</span>
+          <img
+            src="https://occ-0-1920-1380.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABRCt9CVGwqQKm1u5XByVqET0FEuvDtVFbQUjXtYSfSPsTkuYJUcdgsfD26gsrr9gPECW5EhlUKzsj0UtB1UA2T1wHKdM4c-Ri7QwJ4hSQ0sue4axwnXjFY1lY4rs9QemK3L1.jpg?r=9b0"
+            alt="A Última Casa" />
+        </div>
+
+        <div class="trending-card">
+          <span class="rank-number">2</span>
+          <img
+            src="https://occ-0-1920-1380.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABVBsxUXjb-24n8-40B4x_8OJURUJRbHEKcBGPhm9W0AcdwRLLNh0-N4Ks0n8hzMsyhiFpbOQ2RoEGuLOn3dcfnShQpn3VBpMwJbYT42iEWju8YEhn79PWzwxOMl9DZhBIMDl.jpg?r=b07"
+            alt="Elize Matsunaga" />
+        </div>
+
+        <div class="trending-card">
+          <span class="rank-number">3</span>
+          <img
+            src="https://occ-0-1920-1380.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABZTpqX2Eheu0lk-S4dGdgOFK_slT2mImJnNJ_Eoo1jM7405vdHUsTf9nNgOJfOZwN_9l7Db6o15_udHe3ntAbuNHfHnLyZn05KNPTR40H6y08N4XaYClwX0p4b6o9Hvv9rt-.jpg?r=160"
+            alt="Como Mágica" />
+        </div>
+
+        <div class="trending-card">
+          <span class="rank-number">4</span>
+          <img
+            src="https://occ-0-1920-1380.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABXxwC4AQBgNQUKx340Z3VdPKcQBCPSx1DFxzGC0SrmTmxMpBloa2vkFkU_opp2rWrQWlsryQf8sPW0TiSNedI3joBv3Ly9eRzqWkKzWDu9g7vCvTjTx1hjC1YScYlaGN4ZOi.jpg?r=6c0"
+            alt="A Vida da Família Walter" />
+        </div>
+
+        <div class="trending-card">
+          <span class="rank-number">5</span>
+          <img
+            src="https://occ-0-1920-1380.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABWJIRfrApoBahK_Y7nBfBXrVwPteUMJuSW1_SlYxoMz11pgIeErc_EK6dihmAByL0csqrM1OTzhvYy6BxxisQlGGfH3BEVJuVkfVEAcgkErHJJMbtshvjc3SidSFkgiPB_uo.jpg?r=799"
+            alt="Vou te encontrar" />
+        </div>
+
+        <div class="trending-card">
+          <span class="rank-number">6</span>
+          <img
+            src="https://occ-0-1920-1380.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABWJf4-M_aFg2YPqjkl0ujgk5sN_j8bbpWffFgdkTHAifynkGaaQcQ2TtavAdEKUvPgGgl85VsB8ZqfKcUsUcEEONAgrz077iTaE.jpg?r=0b1"
+            alt="O Mentalista" />
+        </div>
+
+        <div class="trending-card">
+          <span class="rank-number">7</span>
+          <img
+            src="https://occ-0-1920-1380.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABeZewd1qPnGi2KuKvKVifCRWf3DN9RVs5KumCdsNala5zVadvlPpmgjEXIb3Ws0g4GnzU-jmKIEOgEnReXskYxidFdtWF5vrKkBzNl2KHMSnNC0FBtFyFtHm9qEIB_zNYTaT.jpg?r=63f"
+            alt="Avatar" />
+        </div>
+      </div>
+    </section>
+
+    <section class="reasons-section">
+      <h2 class="section-title">Mais motivos para assinar</h2>
+      <div class="reasons-grid">
+        <div class="reason-card">
+          <h3>Aproveite na TV</h3>
+          <p>
+            Assista em Smart TVs, PlayStation, Xbox, Chromecast, Apple TV,
+            aparelhos de Blu-ray e outros dispositivos.
+          </p>
+          <img src="assets/images/img-tela-inicial-pc.png" alt="Monitor" class="reason-icon" />
+        </div>
+        <div class="reason-card">
+          <h3>Baixe séries para assistir offline</h3>
+          <p>
+            Salve seus títulos favoritos e sempre tenha algo para assistir.
+          </p>
+          <img src="assets/images/img-tela-inicial-seta.png" alt="Download" class="reason-icon" />
+        </div>
+        <div class="reason-card">
+          <h3>Assista onde quiser</h3>
+          <p>
+            Assista a quantos filmes e séries quiser no celular, tablet,
+            laptop e TV.
+          </p>
+          <img src="assets/images/img-tela-inicial-telescopio.png" alt="Telescopio" class="reason-icon" />
+        </div>
+        <div class="reason-card">
+          <h3>Crie perfis para crianças</h3>
+          <p>
+            Deixe as crianças se aventurarem com seus personagens favoritos em
+            um espaço feito só para elas, sem pagar a mais por isso.
+          </p>
+          <img src="assets/images/img-tela-inicial-perfis.png" alt="Perfis Netflix" class="reason-icon" />
+        </div>
+      </div>
+    </section>
+
+    <section class="faq-container">
+      <h2 class="section-title">Perguntas frequentes</h2>
+
+      <details>
+        <summary>O que é a Netflix?</summary>
+        <div class="faq-response">
+          <p>
+            A Netflix é um serviço de transmissão online que oferece uma ampla
+            variedade de séries, filmes e documentários premiados em milhares
+            de aparelhos conectados à internet.
+          </p>
+          <br />
+          <p>
+            Você pode assistir a quantos filmes e séries quiser, quando e onde
+            quiser, sem comerciais – tudo por um preço mensal bem acessível.
+            Aqui você sempre encontra novidades. A cada semana, adicionamos
+            novas séries e filmes.
+          </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Quanto custa a Netflix?</summary>
+        <div class="faq-response">
+          <p>
+            Novos assinantes podem experimentar 30 dias da Netflix por R$ 0.
+            Após o fim do teste grátis, seu plano será renovado
+            automaticamente pelo preço normal, conforme o plano selecionado.
+            Os planos variam de R$ 20,90 a R$ 59,90. <br />
+            <br />
+            Assista à Netflix no seu celular, tablet, smart TV, notebook ou
+            aparelho de streaming. Sem custo adicional, cancele quando quiser.
+          </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Onde posso assistir?</summary>
+        <div class="faq-response">
+          <p>
+            Assista onde quiser, quando quiser. Acesse sua conta Netflix em
+            netflix.com para assistir no computador ou em qualquer aparelho
+            conectado à internet compatível com o aplicativo Netflix, como
+            Smart TVs, smartphones, tablets, aparelhos de streaming e
+            videogames.
+          </p>
+          <br />
+          <p>
+            Você também pode baixar suas séries favoritas com o aplicativo
+            Netflix para iOS ou Android. Use os downloads para levar a Netflix
+            para onde quiser sem precisar de conexão com a internet. Leve a
+            Netflix com você para qualquer lugar.
+          </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Como faço para cancelar?</summary>
+        <div class="faq-response">
+          <p>
+            A Netflix é flexível. Você pode cancelar a sua conta online com
+            apenas dois cliques. Não há taxa de cancelamento. Você inicia e
+            encerra sua assinatura quando quiser.
+          </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>O que eu posso assistir na Netflix?</summary>
+        <div class="faq-response">
+          <p>
+            A Netflix tem um grande catálogo de filmes, documentários, séries,
+            originais Netflix premiados e muito mais. Assista o quanto quiser,
+            quando quiser.
+          </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>A Netflix é adequada para crianças?</summary>
+        <div class="faq-response">
+          <p>
+            A experiência infantil da Netflix faz parte da sua assinatura para
+            que as crianças se divirtam em seu próprio espaço com séries e
+            filmes familiares sob a supervisão dos responsáveis.
+          </p>
+          <br />
+          <p>
+            O recurso de controle parental, incluso nos perfis para crianças e
+            protegido por PIN, permite restringir a classificação etária do
+            conteúdo que as crianças podem ver e bloquear títulos específicos
+            que você não quer que elas assistam.
+          </p>
+        </div>
+      </details>
+    </section>
+
+    <section class="form-subscription">
+      <p class="form-call">
+        Tudo pronto para assistir? Informe seu email para iniciar sua
+        assinatura.
+      </p>
+
+      <form class="email-form">
+        <div class="input-group">
+          <input type="email" id="email" required placeholder=" " />
+          <label for="email">Email</label>
+        </div>
+        <button type="submit" class="btn-get-started">
+          Experimente 30 dias por R$ 0
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+      </form>
+      <span class="form-disclaimer">
+        Esta oferta só é válida para novos assinantes. Esta oferta não é
+        transferível. Você concorda que a Netflix cobre o preço da assinatura
+        da sua forma de pagamento ao final do período de utilização gratuita e
+        renove automaticamente a assinatura até você cancelar. Algumas formas
+        de pagamento podem não se qualificar para resgatar esta oferta.
+      </span>
+    </section>
+  </main>
+
+  <footer class="index-footer">
+    <div class="footer-container">
+      <p class="footer-top">
+        Dúvidas? Ligue para <a href="tel:08005918943">0800 591 8943</a>
+      </p>
+
+      <ul class="footer-links">
+        <li><a href="#">Perguntas frequentes</a></li>
+        <li><a href="#">Central de Ajuda</a></li>
+        <li><a href="#">Conta</a></li>
+        <li><a href="#">Media Center</a></li>
+        <li><a href="#">Relações com investidores</a></li>
+        <li><a href="#">Carreiras</a></li>
+        <li><a href="#">Resgatar cartão pré-pago</a></li>
+        <li><a href="#">Comprar cartão pré-pago</a></li>
+        <li><a href="#">Formas de assistir</a></li>
+        <li><a href="#">Termos de Uso</a></li>
+        <li><a href="#">Privacidade</a></li>
+        <li><a href="#">Preferências de cookies</a></li>
+        <li><a href="#">Informações corporativas</a></li>
+        <li><a href="#">Entre em contato</a></li>
+        <li><a href="#">Teste de velocidade</a></li>
+        <li><a href="#">Avisos legais</a></li>
+        <li><a href="#">Só na Netflix</a></li>
+      </ul>
+
+      <div class="lang-selector">
+        <i class="fa-solid fa-language" style="color: rgb(255, 255, 255)"></i>
+        <select>
+          <option>Português</option>
+          <option>English</option>
+        </select>
+      </div>
+
+      <p class="footer-country">Netflix Brasil</p>
+
+      <p class="footer-disclaimer">
+        Esta página é protegida pelo Google reCAPTCHA para garantir que você
+        não é um robô.
+      </p>
+    </div>
+  </footer>
+</body>
+
 </html>
