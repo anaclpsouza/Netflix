@@ -1,113 +1,104 @@
 <!doctype html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../css/common.css" />
-    <link rel="stylesheet" href="../css/login.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-      <link rel="shortcut icon" href="../assets/icons/netflix-logo-icon.png" type="image/x-icon">
-    <title>Netflix</title>
-  </head>
-  <body class="login-body">
-    <header>
-      <nav class="nav-login">
-        <div class="logo" id="logo-index">
-          <a href="../index.html" class="link-logo">
-            <img
-              src="https://occ.a.nflxso.net/dnmt/api/v6/iL4oJVDYZ8KLSrJ6eG2OwtghbfQ/AAAAAZge2REfWoSoWRs31izjUdgihldMUslSHTdfz-1aT4vVrgJuVByU92G8wIrBkwULJHWjM1khpzW0xWndigQFYViKFpy-pM6NZFnTKEPkpf9hcdSzCyzqBbcouyIpmgVLbodhaeyqCXaS.svg"
-              alt="Logo Netflix" />
-          </a>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/login.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="shortcut icon" href="../assets/icons/netflix-logo-icon.png" type="image/x-icon">
+  <title>Netflix</title>
+</head>
+
+<body class="login-body">
+  <header>
+    <nav class="nav-login">
+      <div class="logo" id="logo-index">
+        <a href="../index.html" class="link-logo">
+          <img
+            src="https://occ.a.nflxso.net/dnmt/api/v6/iL4oJVDYZ8KLSrJ6eG2OwtghbfQ/AAAAAZge2REfWoSoWRs31izjUdgihldMUslSHTdfz-1aT4vVrgJuVByU92G8wIrBkwULJHWjM1khpzW0xWndigQFYViKFpy-pM6NZFnTKEPkpf9hcdSzCyzqBbcouyIpmgVLbodhaeyqCXaS.svg"
+            alt="Logo Netflix" />
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="login-box">
+      <h1>Informe seus dados para entrar</h1>
+      <p>Ou crie uma conta.</p>
+
+      <form class="login-form">
+        <div class="input-group">
+          <input type="text" id="user-id" name="userId" placeholder=" " required />
+          <label for="user-id">Email ou número de celular</label>
         </div>
-      </nav>
-    </header>
 
-    <main>
-      <section class="login-box">
-        <h1>Informe seus dados para entrar</h1>
-        <p>Ou crie uma conta.</p>
+        <div class="input-group">
+          <input type="password" id="password" name="password" placeholder=" " required />
+          <label for="password">Senha</label>
+        </div>
 
-        <form class="login-form">
-          <div class="input-group">
-            <input
-              type="text"
-              id="user-id"
-              name="userId"
-              placeholder=" "
-              required />
-            <label for="user-id">Email ou número de celular</label>
+        <a href="profiles.html" class="btn-login-submit" role="button">Entrar</a>
+
+        <div class="form-help">
+          <div class="remember-me">
+            <input type="checkbox" id="remember" name="remember" checked>
+            <label for="remember">Lembrar de mim</label>
           </div>
-
-          <div class="input-group">
-            <input
-              type="password"
-              id="password"
-              name="password"
-              placeholder=" "
-              required />
-            <label for="password">Senha</label>
-          </div>
-
-          <a href="profile.html" class="btn-login-submit" role="button">Entrar</a>
-
-          <div class="form-help">
-            <div class="remember-me">
-              <input type="checkbox" id="remember" name="remember" checked>
-              <label for="remember">Lembrar de mim</label>
-            </div>
-            <a href="#" class="forgot-password">Esqueceu a senha?</a>
-          </div>
-        </form>
-
-        <div class="signup-now">
-          <span class="text-gray">Ainda não possui uma conta?</span>
-          <a href="../index.html">Assine agora.</a>
+          <a href="#" class="forgot-password">Esqueceu a senha?</a>
         </div>
+      </form>
 
-        <div class="recaptcha-terms">
-          <p>
-            <small>
-              Esta página é protegida pelo Google reCAPTCHA para garantir que
-              você não é um robô.
-            </small>
-          </p>
-        </div>
-      </section>
-    </main>
+      <div class="signup-now">
+        <span class="text-gray">Ainda não possui uma conta?</span>
+        <a href="../index.html">Assine agora.</a>
+      </div>
 
-    <footer class="index-footer" id="login-footer">
-      <div class="footer-container">
-        <p class="footer-top">
-          Dúvidas? Ligue para
-          <a href="tel:08005918943">0800 591 8943</a> (ligação grátis)
-        </p>
-
-        <ul class="footer-links">
-          <li><a href="#">Perguntas frequentes</a></li>
-          <li><a href="#">Preferências de cookies</a></li>
-          <li><a href="#">Informações corporativas</a></li>
-          <li><a href="#">Central de Ajuda</a></li>
-          <li><a href="#">Termos de Uso</a></li>
-          <li><a href="#">Privacidade</a></li>
-        </ul>
-
-        <div class="lang-selector">
-          <i class="fa-solid fa-language" style="color: rgb(255, 255, 255)"></i>
-          <select>
-            <option>Português</option>
-            <option>English</option>
-          </select>
-        </div>
-
-        <p class="footer-country">Netflix Brasil</p>
-
-        <p class="footer-disclaimer">
-          Esta página é protegida pelo Google reCAPTCHA para garantir que você
-          não é um robô.
+      <div class="recaptcha-terms">
+        <p>
+          <small>
+            Esta página é protegida pelo Google reCAPTCHA para garantir que
+            você não é um robô.
+          </small>
         </p>
       </div>
-    </footer>
-  </body>
+    </section>
+  </main>
+
+  <footer class="index-footer" id="login-footer">
+    <div class="footer-container">
+      <p class="footer-top">
+        Dúvidas? Ligue para
+        <a href="tel:08005918943">0800 591 8943</a> (ligação grátis)
+      </p>
+
+      <ul class="footer-links">
+        <li><a href="#">Perguntas frequentes</a></li>
+        <li><a href="#">Preferências de cookies</a></li>
+        <li><a href="#">Informações corporativas</a></li>
+        <li><a href="#">Central de Ajuda</a></li>
+        <li><a href="#">Termos de Uso</a></li>
+        <li><a href="#">Privacidade</a></li>
+      </ul>
+
+      <div class="lang-selector">
+        <i class="fa-solid fa-language" style="color: rgb(255, 255, 255)"></i>
+        <select>
+          <option>Português</option>
+          <option>English</option>
+        </select>
+      </div>
+
+      <p class="footer-country">Netflix Brasil</p>
+
+      <p class="footer-disclaimer">
+        Esta página é protegida pelo Google reCAPTCHA para garantir que você
+        não é um robô.
+      </p>
+    </div>
+  </footer>
+</body>
+
 </html>
