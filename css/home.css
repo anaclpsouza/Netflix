@@ -925,3 +925,78 @@ footer .footer-link-wrapper {
     flex: 0 0 50%;
   }
 }
+
+/* RESPONSIVIDADE DO MODAL DE DETALHES */
+@media (max-width: 768px) {
+  .modal .modal-content {
+    min-width: 0;
+    width: 95%;
+    margin-top: 30px;
+    max-height: 90vh;
+  }
+
+  .modal-banner img {
+    height: 250px;
+  }
+
+  .banner-info {
+    bottom: 20px;
+    left: 20px;
+  }
+
+  .banner-info h2 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+  }
+
+  .btn-play {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+
+  .btn-icon {
+    width: 32px;
+    height: 32px;
+    font-size: 1rem;
+  }
+
+  .modal-detalhes {
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 20px 20px 20px;
+  }
+
+  .modal-inferior {
+    padding: 0 20px 20px 20px;
+  }
+
+  .grid-similares {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-bottom: 30px;
+  }
+
+  .classificacao-rodape {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  
+  .aviso-idade {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .grid-similares {
+    grid-template-columns: 1fr;
+  }
+  
+  .modal-banner img {
+    height: 200px;
+  }
+  
+  .banner-info h2 {
+    font-size: 1.8rem;
+  }
+}
