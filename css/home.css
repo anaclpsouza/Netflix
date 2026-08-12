@@ -450,6 +450,7 @@
 }
 
 .btn-play {
+  text-decoration: none;
   background-color: #fff;
   color: #000;
 }
